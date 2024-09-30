@@ -5,7 +5,6 @@ interface snooperProps {
 }
 
 const Snooper = (props: snooperProps) => {
-
   return (
     <div className={`min-w-64 max-w-64 text-center`}>
       <img
@@ -13,7 +12,9 @@ const Snooper = (props: snooperProps) => {
         src={props.image}
         alt={props.altText}
       />
-      <p>{props.value}</p>
+      <strong>
+        <p>{props.value}</p>
+      </strong>
     </div>
   );
 };

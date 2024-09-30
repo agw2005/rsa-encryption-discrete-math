@@ -23,8 +23,8 @@ function App() {
         Encryption with RSA algorithm
       </h1>
 
-      <div className={`${border} flex justify-center mt-32`}>
-        <div className={`${border} max-h-96 mr-8`}>
+      <div className={`${border} flex justify-center`}>
+        <div className={`${border} max-h-96`}>
           <User
             image="../public/user-solid.svg"
             altText="user-sender"
@@ -61,7 +61,8 @@ function App() {
           value={encryptedText}
           readOnly
         ></textarea>
-        <div className={`${border} max-h-96 ml-8`}>
+
+        <div className={`${border} max-h-96`}>
           <User
             image="../public/user-solid.svg"
             altText="user-receiver"
@@ -70,7 +71,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`flex justify-center`}>
+      <div className={`${border} flex justify-center`}>
         <Snooper
           image="../public/user-secret-solid.svg"
           altText="user-snooper"

@@ -5,15 +5,12 @@ interface userProps {
 }
 
 const User = (props: userProps) => {
-
   return (
-    <div className={`my-8 min-h-64 max-h-64 text-center`}>
-      <img
-        className={`min-h-64 max-h-64`}
-        src={props.image}
-        alt={props.altText}
-      />
-      <p>{props.value}</p>
+    <div className={`min-w-64 max-w-64 px-4`}>
+      <img className={`p-4`} src={props.image} alt={props.altText} />
+      <strong>
+        <p className="text-center">{props.value}</p>
+      </strong>
     </div>
   );
 };
