@@ -26,7 +26,7 @@ function App() {
       <div className={`${border} flex justify-center`}>
         <div className={`${border} max-h-96`}>
           <User
-            image="../public/user-solid.svg"
+            image="/user-solid.svg"
             altText="user-sender"
             value="User - Source"
           ></User>
@@ -64,7 +64,7 @@ function App() {
 
         <div className={`${border} max-h-96`}>
           <User
-            image="../public/user-solid.svg"
+            image="/user-solid.svg"
             altText="user-receiver"
             value="User - Destination"
           ></User>
@@ -73,7 +73,7 @@ function App() {
 
       <div className={`${border} flex justify-center`}>
         <Snooper
-          image="../public/user-secret-solid.svg"
+          image="/user-secret-solid.svg"
           altText="user-snooper"
           value="User - Snooper"
         ></Snooper>
