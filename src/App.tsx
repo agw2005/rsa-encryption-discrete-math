@@ -9,16 +9,26 @@ function App() {
     setEncryptedText(plainText);
   };
 
+  const border: String = "border-2 border-black border-solid";
+
   return (
     <>
-      <h1 className="text-4xl text-center p-16">
+      <h1 className={`text-4xl text-center p-16`}>
         Encryption with RSA algorithm
       </h1>
 
-      <div className="border-2 border-black border-solid flex justify-center">
+      <div className={`${border} flex justify-center`}>
+        <div className={`${border} flex flex-col text-center`}>
+          <img
+            className={`${border} px-4 w-64`}
+            src="\user-solid.svg"
+            alt="user-sender"
+          />
+          <p>Sender</p>
+        </div>
         <form onSubmit={handleSubmit}>
           <textarea
-            className="p-4 border-2 border-black border-solid min-w-96 min-h-96 max-w-96 max-h-96 resize-none"
+            className={`${border} p-4 min-w-96 min-h-96 max-w-96 max-h-96 resize-none`}
             placeholder="Teks yang akan di-enkripsi"
             value={plainText}
             onChange={(clickEvent) => setPlainText(clickEvent.target.value)}
@@ -27,22 +37,20 @@ function App() {
           <br />
 
           <input
-            className="border-2 border-black border-solid p-4 bg-gray-300 hover:bg-slate-500 hover:text-white"
+            className={`${border} p-4 bg-gray-300 hover:bg-slate-500 hover:text-white`}
             type="submit"
             value="✅"
           />
         </form>
 
-        <div className="flex justify-evenly px-4">
-          <img
-            className="border-2 border-black border-solid max-w-64 min-w-64"
-            src="\RSA-arrow.png"
-            alt="arrow"
-          />
-        </div>
+        <img
+          className={`${border} px-4 max-w-64 min-w-64`}
+          src="\RSA-arrow.png"
+          alt="arrow"
+        />
 
         <textarea
-          className="p-4 border-2 border-black border-solid min-w-96 min-h-96 max-w-96 max-h-96 resize-none"
+          className={`${border} p-4 min-w-96 min-h-96 max-w-96 max-h-96 resize-none`}
           placeholder="Teks yang telah di-enkripsi"
           value={encryptedText}
           readOnly
